@@ -137,7 +137,7 @@ class LoginScreen extends StatelessWidget {
                               CustomTextFormField(
                                   controller: emailController,
                                   text: 'E-mail',
-                                  hint: 'nguyenduylong@gmail.com',
+                                  hint: 'nguyennam@gmail.com',
                                   onSave: (value) {
                                     //controller.userName = value!;
                                   },

@@ -337,6 +337,9 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
                               },
                               icon: Icon(Icons.image_outlined,
                                   color: MyColors.mainColor)),
+                          IconButton(onPressed: (){
+
+                          }, icon: Icon(Icons.call, color: Colors.lightBlue,)),
                           Expanded(
                             child: Container(
                               height: 45,

@@ -12,14 +12,6 @@ class UserService {
     final storage = FlutterSecureStorage();
     String? UID = await storage.read(key: 'uID');
     final result = await users.doc(UID).get();
-    // final UserModel user = UserModel(
-    //     gender: result.get('gender'),
-    //     email: result.get('email'),
-    //     phone: result.get('phone'),
-    //     age: result.get('age'),
-    //     avartaURL: result.get('avartaURL'),
-    //     fullName: result.get('fullName'));
-    //print(result.get('fullName'));
     return result;
   }
 
@@ -104,15 +96,6 @@ class UserService {
           .then((value) => print("User's Image Updated"))
           .catchError((error) => print("Failed to update user: $error"));
       return false;
-      // Navigator.push(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => HomeScreen()),
-      // );
-      getSnackBar(
-        'Edit Image',
-        'Edit Success.',
-        Colors.green,
-      ).show(context);
     } catch (e) {
       getSnackBar(
         'Edit Image',

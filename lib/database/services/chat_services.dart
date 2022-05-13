@@ -53,30 +53,6 @@ class ChatService {
         )
         .catchError((e) {});
   }
-
-  // static getUserIDChatRoom({
-  //   required String currentUserID,
-  // }) {
-  //   CollectionReference chats = FirebaseFirestore.instance.collection('chats');
-  //   String uID = 'uID';
-  //   chats
-  //       .where('messages', whereIn: [currentUserID])
-  //       .limit(3)
-  //       .get()
-  //       .then(
-  //         (QuerySnapshot querySnapshot) {
-  //           if (querySnapshot.docs.isNotEmpty) {
-  //             for (int i = 0; i < querySnapshot.docs.length; i++) {
-  //               print('lap = ${querySnapshot.docs[i].id}');
-  //             }
-  //           } else {
-  //             print('lap = none+ ${querySnapshot.docs}');
-  //           }
-  //         },
-  //       )
-  //       .catchError((e) {});
-  // }
-
   static Future getUserPeopleChatID({required String currentUserID}) async {
     final CollectionReference users =
         FirebaseFirestore.instance.collection('users');
